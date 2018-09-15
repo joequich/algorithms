@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reverse String</title>
+</head>
+
+<body>
+    <main>
+        <h1>Reverse a String</h1>
+        <p>Please, open your browser console. <a href="/algorithms/index.html">Return</a><p>
+    </main>
+    <script>
+        function reverseString(str) {
+            "use strict";
+            var arr = [];
+            for (var i = 0; i < str.length; i++) {
+                arr.unshift(str[i]);
+            }
+            str = arr.join("");
+            console.log(typeof str);
+            return str;
+        }
+
+        console.log(reverseString("hello"));
+    </script>
+</body>
+
+</html>

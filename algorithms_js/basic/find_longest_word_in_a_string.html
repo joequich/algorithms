@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Find the Longest Word in a String</title>
+</head>
+
+<body>
+    <main>
+        <h1>Find the Longest Word in a String</h1>
+        <p>Please, open your browser console. <a href="/algorithms/index.html">Return</a><p>
+    </main>
+    <script>
+    // function findLongestWordLength(str) {
+    //
+    //     str = str + " "; //agregamos un espacio, ya que nos guiaremos de esto
+    //     let pos = str.indexOf(" "); //primera posicion de espacio
+    //     let posOld = -1; //el espacio que no esta, al comienzo de la cadena
+    //     let word = 0; //variable para alacenar la longitud de cada palabra
+    //     let res = 0; //variable para almacenar el resultado
+    //     while (pos != -1) { //cuando el indexOf de -1 salga del while
+    //         word = (pos - posOld) - 1; //resta la primera posicion del espacio y resta 1 porque se comiensza por 0
+    //         posOld = pos; //guardamos la posicion del espacio
+    //         pos = str.indexOf(" ", pos + 1); // buscamos la segunda posicion del espacio
+    //         if (word > res) { //compara entre la longitud de las palabras
+    //             res = word; // 4
+    //         } else {
+    //             res = res;
+    //         }
+    //     }
+    //     return res;
+    // }
+
+
+    function findLongestWordLength(str) {
+        let str = "Hola mi nombre es Joseph";
+        let res = str.split(" ");
+        let resultado = 0;
+        for (let i = 0; i< res.length; i++){
+            console.log(res[i].length);
+            console.log("nuevo "+resultado);
+            if(  res[i].length > resultado){
+                resultado = res[i].length;
+            }else{
+                resultado = resultado;
+            }
+        }
+        return resultado;
+    }
+
+    console.log(findLongestWordLength("Hola mi nombre es Joseph"));
+    </script>
+</body>
+
+</html>

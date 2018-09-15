@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Factorialize a number</title>
+</head>
+
+<body>
+    <main>
+        <h1>Factorialize a number</h1>
+        <p>Please, open your browser console. <a href="/algorithms/index.html">Return</a><p>
+    </main>
+    <script>
+        //Sin recursividad
+        // function factorizar(num) {
+        // let res = 1;
+        //     while (num > 0) {
+        //         res = res * num;
+        //         --num;
+        //     }
+        //      return res;
+        // }
+
+        //con recursividad y operador condicional ternario
+        function factorizar(num) {
+            return num >= 1 ? num * factorizar(num - 1) : 1;
+        }
+        console.log(factorizar(5));
+    </script>
+</body>
+
+</html>
